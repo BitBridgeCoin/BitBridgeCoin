@@ -1,0 +1,81 @@
+policy_module(bitbridgecoin, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type bitbridgecoin_t;
+type bitbridgecoin_exec_t;
+init_daemon_domain(bitbridgecoin_t, bitbridgecoin_exec_t)
+
+permissive bitbridgecoin_t;
+
+type bitbridgecoin_initrc_exec_t;
+init_script_file(bitbridgecoin_initrc_exec_t)
+
+type bitbridgecoin_conf_t;
+files_type(bitbridgecoin_conf_t)
+
+type bitbridgecoin_var_lib_t;
+files_type(bitbridgecoin_var_lib_t)
+
+type bitbridgecoin_var_run_t;
+files_type(bitbridgecoin_var_run_t)
+
+type bitbridgecoin_port_t;
+corenet_port(bitbridgecoin_port_t)
+
+########################################
+#
+# bitbridgecoin local policy
+#
+allow bitbridgecoin_t self:process { fork };
+
+allow bitbridgecoin_t self:fifo_file rw_fifo_file_perms;
+allow bitbridgecoin_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(bitbridgecoin_t, bitbridgecoin_conf_t, bitbridgecoin_conf_t)
+manage_files_pattern(bitbridgecoin_t, bitbridgecoin_conf_t, bitbridgecoin_conf_t)
+
+manage_dirs_pattern(bitbridgecoin_t, bitbridgecoin_var_lib_t, bitbridgecoin_var_lib_t)
+manage_files_pattern(bitbridgecoin_t, bitbridgecoin_var_lib_t, bitbridgecoin_var_lib_t)
+files_var_lib_filetrans(bitbridgecoin_t, bitbridgecoin_var_lib_t, { dir file })
+
+manage_dirs_pattern(bitbridgecoin_t, bitbridgecoin_var_run_t, bitbridgecoin_var_run_t)
+manage_files_pattern(bitbridgecoin_t, bitbridgecoin_var_run_t, bitbridgecoin_var_run_t)
+
+sysnet_dns_name_resolve(bitbridgecoin_t)
+corenet_all_recvfrom_unlabeled(bitbridgecoin_t)
+
+allow bitbridgecoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(bitbridgecoin_t)
+corenet_tcp_sendrecv_generic_node(bitbridgecoin_t)
+corenet_tcp_sendrecv_all_ports(bitbridgecoin_t)
+corenet_tcp_bind_generic_node(bitbridgecoin_t)
+
+gen_require(`
+    type bitbridgecoin_port_t;
+')
+allow bitbridgecoin_t bitbridgecoin_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type bitbridgecoin_port_t;
+')
+allow bitbridgecoin_t bitbridgecoin_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(bitbridgecoin_t)
+
+files_read_etc_files(bitbridgecoin_t)
+
+miscfiles_read_localization(bitbridgecoin_t)
+
+sysnet_dns_name_resolve(bitbridgecoin_t)
+
+allow bitbridgecoin_t bitbridgecoin_exec_t:file execute_no_trans;
+allow bitbridgecoin_t self:process setsched;
+corecmd_exec_ls(bitbridgecoin_t)
+corenet_tcp_connect_http_port(bitbridgecoin_t)
+dev_read_urand(bitbridgecoin_t)
+fs_getattr_xattr_fs(bitbridgecoin_t)
+kernel_read_system_state(bitbridgecoin_t)

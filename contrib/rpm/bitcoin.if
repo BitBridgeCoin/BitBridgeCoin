@@ -1,0 +1,157 @@
+
+## <summary>policy for bitbridgecoin</summary>
+
+
+########################################
+## <summary>
+##	Transition to bitbridgecoin.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+#
+interface(`bitbridgecoin_domtrans',`
+	gen_require(`
+		type bitbridgecoin_t, bitbridgecoin_exec_t;
+	')
+
+	corecmd_search_bin($1)
+	domtrans_pattern($1, bitbridgecoin_exec_t, bitbridgecoin_t)
+')
+
+
+########################################
+## <summary>
+##	Execute bitbridgecoin server in the bitbridgecoin domain.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`bitbridgecoin_initrc_domtrans',`
+	gen_require(`
+		type bitbridgecoin_initrc_exec_t;
+	')
+
+	init_labeled_script_domtrans($1, bitbridgecoin_initrc_exec_t)
+')
+
+
+########################################
+## <summary>
+##	Search bitbridgecoin lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`bitbridgecoin_search_lib',`
+	gen_require(`
+		type bitbridgecoin_var_lib_t;
+	')
+
+	allow $1 bitbridgecoin_var_lib_t:dir search_dir_perms;
+	files_search_var_lib($1)
+')
+
+########################################
+## <summary>
+##	Read bitbridgecoin lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`bitbridgecoin_read_lib_files',`
+	gen_require(`
+		type bitbridgecoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	read_files_pattern($1, bitbridgecoin_var_lib_t, bitbridgecoin_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage bitbridgecoin lib files.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`bitbridgecoin_manage_lib_files',`
+	gen_require(`
+		type bitbridgecoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_files_pattern($1, bitbridgecoin_var_lib_t, bitbridgecoin_var_lib_t)
+')
+
+########################################
+## <summary>
+##	Manage bitbridgecoin lib directories.
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+#
+interface(`bitbridgecoin_manage_lib_dirs',`
+	gen_require(`
+		type bitbridgecoin_var_lib_t;
+	')
+
+	files_search_var_lib($1)
+	manage_dirs_pattern($1, bitbridgecoin_var_lib_t, bitbridgecoin_var_lib_t)
+')
+
+
+########################################
+## <summary>
+##	All of the rules required to administrate
+##	a bitbridgecoin environment
+## </summary>
+## <param name="domain">
+##	<summary>
+##	Domain allowed access.
+##	</summary>
+## </param>
+## <param name="role">
+##	<summary>
+##	Role allowed access.
+##	</summary>
+## </param>
+## <rolecap/>
+#
+interface(`bitbridgecoin_admin',`
+	gen_require(`
+		type bitbridgecoin_t;
+		type bitbridgecoin_initrc_exec_t;
+		type bitbridgecoin_var_lib_t;
+	')
+
+	allow $1 bitbridgecoin_t:process { ptrace signal_perms };
+	ps_process_pattern($1, bitbridgecoin_t)
+
+	bitbridgecoin_initrc_domtrans($1)
+	domain_system_change_exemption($1)
+	role_transition $2 bitbridgecoin_initrc_exec_t system_r;
+	allow $2 system_r;
+
+	files_search_var_lib($1)
+	admin_pattern($1, bitbridgecoin_var_lib_t)
+
+')
+

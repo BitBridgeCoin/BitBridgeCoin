@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BitBridgeCoin Core
+Comment=Connect to the BitBridgeCoin P2P Network
+Comment[de]=Verbinde mit dem BitBridgeCoin peer-to-peer Netzwerk
+Comment[fr]=BitBridgeCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BitBridgeCoin, eşten eşe kriptografik sanal para birimi
+Exec=bitbridgecoin-qt %u
+Terminal=false
+Type=Application
+Icon=bitbridgecoin128
+MimeType=x-scheme-handler/bitbridgecoin;
+Categories=Office;Finance;
