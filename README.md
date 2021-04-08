@@ -1,40 +1,58 @@
-比桥币白皮书
- 
-摘要：比桥币是信任机器时代下的新社会理念的实践，比桥币尝试融合慈善与区块链的货币金融体系，尝试构建慈善本位的价值体系。
+BitBridgeCoin Core integration/staging tree
+=====================================
 
-介绍：区块链开启信任机器时代。区块链使人类逐步从信任代理(政府，银行等第三方机构)过渡到信任机器(或技术)时代，这种变革将重构人类社会的机构与运作机制。区块链带来的是基于技术的新社会模式以及因此而产生的新的理念和价值体系。以区块链技术为核心的比特币的出现，不但是对现有货币及金融体系的重大挑战，也标志着人类社会的信用結构和交换模式将发生全新的改变。从此基于政府信用的不断贬值的货币发行模式或将成为历史，财富与财富之间交流的价格标准也不再受货币自身的升贬而失去公平。人类资产免受货币欺诈而公正增值的时代必将到来。
-我们认为区块链是人类文明新阶段：信息民主到货币金融民主。人类文明的发展在于制度保证的民主化。西方的文明，很大程度在于限制和削弱政府权力，互联网带来了信息民主化。但因为互联网公司是少数人持有的，又导致了互联网信息分发的垄断。同时互联网没有实现价值的低成本转移。
-区块链带来了新的货币金融体系与社会价值体系。对于价值体系的第一步改变是货币金融体系，这是商业社会的核心。比特币重新定义了货币生成或发行机制，用单一的算力维度作为输入，直接促进了算力发展，而算力是未来社会发展的核心驱动力。另一方面，新货币发行机制，直接挑战法币发行机制，其是绝对垄断权力，掌握在少数人手中，很大程度也是政府权力的延申。
-比桥币尝试把慈善引入到基于区块链的新货币金融体系，进一步完善加密货币生态系统。
-目前为止在比特币的带动下，全球已出现近万种加密数字货币，形成总交易市值超过万亿美元，巳得到一些权威监管机构，知名投资人，大型上市公司等及市场的广泛认可。
-尽管如此，以比特币为首的数字货币的发展仍存在急待解决的一些问题：
-A. 维护比特币在币圈中的权威，捍卫比特币的基础数字货币地位，以及成为货币价值度量标准，等方面做得还不够；
-B. 所有已经在市场交易的数字货币，其交易仍以传统货币美元等计价，尚没有确定一种统一计价标准的数字货币，来替代传统美元等法币，成为发布交易量等信息的工具；
-C. 数字货币在流通和应用领域，专注慈善，惠及弱势群体应该成为楷模及主流货币，体现上帝博爱精神应该成为有别传统法币的新生数字货币产业的特色。目前尚没有一种非营利的"慈善专用"数字货币出现；
-D. 数字货币是新生事物，需要全人类全社会共同扶持，更需要来自数字货币的自我扶持。目前尚没有以无偿扶持其他各类数字货币事业发展为己任的"公益型数字货币"。
-基于上述原因，承时代使命，担历史责任，应运而生如下数字货币。
- 
-二，概述
- 
-1，币名：BitBridgecoin，缩写：BBC，中文：比桥币。
-2，总量：2100亿个有限数量的挖矿数字货币。
-3，价值：永久铆定比特币价值，以维护比特币信誉，以看好和肯定并支持比特币的价值及意义为目的。铆定比率为1：10000(考虑交易手续成本及其它因素，允许在±0.001%范围内波动)
-4，性质：公益慈善型数字货币。无偿无回报非营利是本币的宗旨。
- 
-三，用途
- 
-1，是各种数字货币之间的桥梁。是数字货币之间兑换的价值参照标准，或称公平汇兑的中间尺度。最终将成为唯一的法定(或公认)的货币间的标准"度量衡"。是"全球数字货币汇率发布中心"的依托载体。目的是淡化乃至剔除數字货币市场交易中的美元等法币概念。
-2，义务支持新型数字货币事业的发展。尊重每一位挖矿者的劳动，并给予支持和鼓励，对各种數字货币的挖矿者所挖出的价值按比例给予无偿的配送或赠送；对在区块链应用丶推广丶助力方面的贡献者给以赠送作为鼓励和打赏，以帮衬和辅佐新生事业的发展。具体赠送办法另出《细则》。
-3，定期或不定期向慈善机构丶慈善活动丶文体公益丶弱势群体丶受灾地区丶医疗辅救丶和平救济等……赠送。具体详见《细则》。
-慈善机构或组织等，获得赠送的BBC，可通过各交易所及交易平台，供有爱心有意支持慈善的企业丶财团及个人购买，以换取美元等法币用于慈善救助。
-凡购买BBC者不但投资了该币与BTC铆定的预期增值回报，也奉献了自己的慈善贡献。
- 
-四，管理
- 
-1，管理机构：BBC的技术拥有者及发起人美国阳光慈善委员会委托"HK Ecoin captal LTD"为BBC的唯一管理公司。
-2，管理范围：平台维护，送币赠币，推广宣传，汇率发布，币库管理，跟踪服务……
-3，管理费用：每年提取BBC当年发行量的0.1~0.5%作为管理费用，多不退少不补，管理公司自行承担盈亏。
-4，公益币库：阳光慈善委员会为BBC设立"公益币库"，公益币库不归任何人拥有，币库里的BBC全部用于慈善。管理公司有义务承担公益币库的维护和管理。
- 
-五，挖矿人
-BBC不同于其它数字货币，公益慈善的属性是BBC的灵魂。每一个挖矿人必须自愿接受公益奉献的原则，同意将挖出的90%BBC奉献给"公益币库"，剩余的10%BBC可做为劳动补偿归挖矿人所有。
+What is BitBridgeCoin?
+----------------
+
+BitBridgeCoin is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. BitBridgeCoin uses peer-to-peer technology to operate
+with no central authority: managing transactions and issuing money are carried
+out collectively by the network. BitBridgeCoin Core is the name of open source
+software which enables the use of this currency.
+
+For more information, as well as an immediately useable, read the
+[original whitepaper](https://worldmoney.org/bitbridgecoin.pdf).
+
+License
+-------
+
+BitBridgeCoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+information or see https://opensource.org/licenses/MIT.
+
+Development Process
+-------------------
+
+The `master` branch is regularly built and tested, but is not guaranteed to be
+completely stable. [Tags](https://github.com/bitbridgecoin/bitbridgecoin/tags) are created
+regularly to indicate new official, stable release versions of BitBridgeCoin Core.
+
+The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Testing
+-------
+
+Testing and code review is the bottleneck for development; we get more pull
+requests than we can review and test on short notice. Please be patient and help out by testing
+other people's pull requests, and remember this is a security-critical project where any mistake might cost people
+lots of money.
+
+### Automated Testing
+
+Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
+submit new unit tests for old code. Unit tests can be compiled and run
+(assuming they weren't disabled in configure) with: `make check`. Further details on running
+and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
+
+There are also [regression and integration tests](/test), written
+in Python, that are run automatically on the build server.
+These tests can be run (if the [test dependencies](/test) are installed) with: `test/functional/test_runner.py`
+
+The Travis CI system makes sure that every pull request is built for Windows, Linux, and OS X, and that unit/sanity tests are run automatically.
+
+### Manual Quality Assurance (QA) Testing
+
+Changes should be tested by somebody other than the developer who wrote the
+code. This is especially important for large or high-risk changes. It is useful
+to add a test plan to the pull request description if testing the changes is
+not straightforward.
+
