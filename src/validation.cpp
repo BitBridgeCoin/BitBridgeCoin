@@ -1829,7 +1829,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
                      error("Missing vout[1]"),
                            REJECT_INVALID, "bad-cb-amount-missing");
    CScript mnPayee;
-   std::string vDevfeeAddress = "BdcWzpWx4s3PRFC4XKkE9c4oWWyWjNRpy2";
+   std::string vDevfeeAddress = "Be3z8SCqxYUSJQrx6Kmdsc8s8Ambm8ewYg";
    CBitBridgeCoinAddress address(vDevfeeAddress.c_str());
    mnPayee = GetScriptForDestination(address.Get());
    if (block.vtx[0]->vout[1].scriptPubKey != mnPayee)

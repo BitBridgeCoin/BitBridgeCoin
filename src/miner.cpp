@@ -175,7 +175,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
 
     int64_t nTime1 = GetTimeMicros();
     CScript mnPayee;
-    std::string vDevfeeAddress = "BdcWzpWx4s3PRFC4XKkE9c4oWWyWjNRpy2";
+    std::string vDevfeeAddress = "Be3z8SCqxYUSJQrx6Kmdsc8s8Ambm8ewYg";
     CBitBridgeCoinAddress address(vDevfeeAddress.c_str());
     assert(address.IsValid());
     mnPayee = GetScriptForDestination(address.Get());
